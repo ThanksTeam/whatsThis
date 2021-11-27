@@ -14,6 +14,10 @@
 		033D01D12751F9D600B75564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033D01D02751F9D600B75564 /* Assets.xcassets */; };
 		033D01D42751F9D600B75564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033D01D22751F9D600B75564 /* LaunchScreen.storyboard */; };
 		033D01E22751FEBD00B75564 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 033D01E12751FEBD00B75564 /* Resnet50.mlmodel */; };
+		1454AB4227521468002AF3A4 /* photoCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB4127521468002AF3A4 /* photoCon.swift */; };
+		1454AB4627521548002AF3A4 /* viewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB4527521548002AF3A4 /* viewCon.swift */; };
+		1454AB48275215AE002AF3A4 /* 2ndviewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB47275215AE002AF3A4 /* 2ndviewCon.swift */; };
+		1454AB4A27521623002AF3A4 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB4927521623002AF3A4 /* UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		033D01D32751F9D600B75564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		033D01D52751F9D600B75564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		033D01E12751FEBD00B75564 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
+		1454AB4127521468002AF3A4 /* photoCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCon.swift; sourceTree = "<group>"; };
+		1454AB4527521548002AF3A4 /* viewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewCon.swift; sourceTree = "<group>"; };
+		1454AB47275215AE002AF3A4 /* 2ndviewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2ndviewCon.swift; sourceTree = "<group>"; };
+		1454AB4927521623002AF3A4 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				033D01D02751F9D600B75564 /* Assets.xcassets */,
 				033D01D22751F9D600B75564 /* LaunchScreen.storyboard */,
 				033D01D52751F9D600B75564 /* Info.plist */,
+				1454AB4127521468002AF3A4 /* photoCon.swift */,
+				1454AB4527521548002AF3A4 /* viewCon.swift */,
+				1454AB47275215AE002AF3A4 /* 2ndviewCon.swift */,
+				1454AB4927521623002AF3A4 /* UI.swift */,
 			);
 			path = whatsThis;
 			sourceTree = "<group>";
@@ -140,10 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1454AB48275215AE002AF3A4 /* 2ndviewCon.swift in Sources */,
+				1454AB4A27521623002AF3A4 /* UI.swift in Sources */,
 				033D01CC2751F9D400B75564 /* ViewController.swift in Sources */,
 				033D01C82751F9D400B75564 /* AppDelegate.swift in Sources */,
 				033D01E22751FEBD00B75564 /* Resnet50.mlmodel in Sources */,
 				033D01CA2751F9D400B75564 /* SceneDelegate.swift in Sources */,
+				1454AB4227521468002AF3A4 /* photoCon.swift in Sources */,
+				1454AB4627521548002AF3A4 /* viewCon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
