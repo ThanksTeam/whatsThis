@@ -23,14 +23,14 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     func detectImageContent() {
         lblResult.text = "Thinking..."
         let mlmodel = Resnet50().model
-        //모델 인스턴스 생성
+        //Create model instance
         guard let model = try? VNCoreMLModel(for: mlmodel) else {
             fatalError("Failed to load model")
         }
 
-        //vision request 생성
-        //CoreML 요청하고 결과
-        //VNClassificationObservation는 이미지분석 결과 확인
+        //vision request
+        //Request CoreML and retrieve the results
+        //VNClassificationObservation: check the result of the image analyzation
         let request = VNCoreMLRequest(model: model) {[weak self] request, error in
             guard let results = request.results as? [VNClassificationObservation],
                 let topResult = results.first
@@ -38,8 +38,8 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
                     fatalError("Unexpected results")
             }
 
-            // 결과를 화면에 업데이트해줌
-            // 정확도 나타내줌
+            // Update the output on the screen
+            // show the accuracy
             DispatchQueue.main.async { [weak self] in
                 self?.lblResult.text = "\(topResult.identifier) with \(Int(topResult.confidence * 100))% confidence"
             }
@@ -48,7 +48,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         guard let ciImage = CIImage(image: self.myPhoto.image!)
             else { fatalError("Cant create CIImage from UIImage") }
 
-        // 백그라운드에서 이미지분석 실행
+        // Run image analysis on the background
         let handler = VNImageRequestHandler(ciImage: ciImage)
         DispatchQueue.global().async {
             do {
