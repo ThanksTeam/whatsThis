@@ -14,6 +14,10 @@
 		033D01D12751F9D600B75564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033D01D02751F9D600B75564 /* Assets.xcassets */; };
 		033D01D42751F9D600B75564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033D01D22751F9D600B75564 /* LaunchScreen.storyboard */; };
 		521D037F27539B80005EF713 /* AlVw.gif in Resources */ = {isa = PBXBuildFile; fileRef = 521D037E27539B80005EF713 /* AlVw.gif */; };
+		521D038427539BF2005EF713 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521D038327539BF2005EF713 /* Resnet50.mlmodel */; };
+		521D038727539C51005EF713 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D038627539C51005EF713 /* CameraViewController.swift */; };
+		521D038927539C78005EF713 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D038827539C78005EF713 /* PhotoViewController.swift */; };
+		521D038B27539D50005EF713 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D038A27539D50005EF713 /* UIImageView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		033D01D32751F9D600B75564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		033D01D52751F9D600B75564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521D037E27539B80005EF713 /* AlVw.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = AlVw.gif; path = ../../../../Downloads/AlVw.gif; sourceTree = "<group>"; };
+		521D038327539BF2005EF713 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
+		521D038627539C51005EF713 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		521D038827539C78005EF713 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		521D038A27539D50005EF713 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +68,10 @@
 			children = (
 				521D037D27539B74005EF713 /* Image */,
 				521D037927539B08005EF713 /* Model */,
+				521D038527539C2A005EF713 /* View */,
 				033D01C72751F9D400B75564 /* AppDelegate.swift */,
 				033D01C92751F9D400B75564 /* SceneDelegate.swift */,
-				033D01CB2751F9D400B75564 /* ViewController.swift */,
-				033D01CD2751F9D400B75564 /* Main.storyboard */,
 				033D01D02751F9D600B75564 /* Assets.xcassets */,
-				033D01D22751F9D600B75564 /* LaunchScreen.storyboard */,
 				033D01D52751F9D600B75564 /* Info.plist */,
 			);
 			path = whatsThis;
@@ -74,6 +80,7 @@
 		521D037927539B08005EF713 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				521D038327539BF2005EF713 /* Resnet50.mlmodel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +91,19 @@
 				521D037E27539B80005EF713 /* AlVw.gif */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		521D038527539C2A005EF713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				033D01CB2751F9D400B75564 /* ViewController.swift */,
+				521D038627539C51005EF713 /* CameraViewController.swift */,
+				521D038827539C78005EF713 /* PhotoViewController.swift */,
+				521D038A27539D50005EF713 /* UIImageView+.swift */,
+				033D01CD2751F9D400B75564 /* Main.storyboard */,
+				033D01D22751F9D600B75564 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				033D01CC2751F9D400B75564 /* ViewController.swift in Sources */,
+				521D038727539C51005EF713 /* CameraViewController.swift in Sources */,
+				521D038B27539D50005EF713 /* UIImageView+.swift in Sources */,
 				033D01C82751F9D400B75564 /* AppDelegate.swift in Sources */,
+				521D038427539BF2005EF713 /* Resnet50.mlmodel in Sources */,
 				033D01CA2751F9D400B75564 /* SceneDelegate.swift in Sources */,
+				521D038927539C78005EF713 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

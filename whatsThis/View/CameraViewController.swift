@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
+//  CameraViewController.swift
 //  whatsThis
 //
-//  Created by Jiyeon Park on 2021-11-27.
+//  Created by 김보민 on 2021/11/28.
 //
 
 import AVKit
 import UIKit
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     private let cameraView = UIView()
     
@@ -18,6 +18,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         $0.numberOfLines = 0
         return $0
     }(UILabel())
+    
+    private let photoButton: UIButton = {
+        $0.backgroundColor = .gray
+        $0.setTitle("Take a photo", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        return $0
+    }(UIButton())
     
     let captureSession = AVCaptureSession()
     
@@ -28,25 +35,42 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.viewDidLoad()
         
         layout()
+        setup()
         captureSessionSetup()
     }
     
     private func layout() {
         view.addSubview(cameraView)
         view.addSubview(outputLabel)
+        view.addSubview(photoButton)
         cameraView.translatesAutoresizingMaskIntoConstraints = false
         outputLabel.translatesAutoresizingMaskIntoConstraints = false
+        photoButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            cameraView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
+            cameraView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             cameraView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             cameraView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            cameraView.heightAnchor.constraint(equalToConstant: 600),
+            cameraView.heightAnchor.constraint(equalToConstant: 500),
             
             outputLabel.topAnchor.constraint(equalTo: cameraView.bottomAnchor, constant: 50),
             outputLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             outputLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            outputLabel.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor, constant: 50)
+            outputLabel.heightAnchor.constraint(equalToConstant: 50),
+            
+            photoButton.topAnchor.constraint(equalTo: outputLabel.bottomAnchor, constant: 50),
+            photoButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            photoButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            photoButton.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: 50),
         ])
+    }
+    
+    private func setup() {
+        view.backgroundColor = .white
+        photoButton.addTarget(self, action: #selector(isClickBack), for: .touchUpInside)
+    }
+    
+    @objc func isClickBack() {
+        self.navigationController?.pushViewController(PhotoViewController(), animated: true)
     }
     
     private func captureSessionSetup() {
@@ -83,14 +107,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
             let request = VNCoreMLRequest(model: model) { (req, err) in
                 guard let results = req.results as? [VNClassificationObservation] else { return }
-                guard let firstObservation = results.first else { return }
+                guard let observation = results.first else { return }
 
                 DispatchQueue.main.async { [weak self] in
-                    self?.outputLabel.text = "\(firstObservation.identifier) : \(Int(firstObservation.confidence * 100))%"
+                    self?.outputLabel.text = "\(observation.identifier) : \(Int(observation.confidence * 100))%"
                 }
             }
             try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
         }
-    
 }
-
