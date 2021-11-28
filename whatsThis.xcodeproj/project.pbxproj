@@ -13,11 +13,7 @@
 		033D01CF2751F9D400B75564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033D01CD2751F9D400B75564 /* Main.storyboard */; };
 		033D01D12751F9D600B75564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033D01D02751F9D600B75564 /* Assets.xcassets */; };
 		033D01D42751F9D600B75564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033D01D22751F9D600B75564 /* LaunchScreen.storyboard */; };
-		033D01E22751FEBD00B75564 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 033D01E12751FEBD00B75564 /* Resnet50.mlmodel */; };
-		1454AB4227521468002AF3A4 /* photoCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB4127521468002AF3A4 /* photoCon.swift */; };
-		1454AB4627521548002AF3A4 /* viewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB4527521548002AF3A4 /* viewCon.swift */; };
-		1454AB48275215AE002AF3A4 /* 2ndviewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB47275215AE002AF3A4 /* 2ndviewCon.swift */; };
-		1454AB4A27521623002AF3A4 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454AB4927521623002AF3A4 /* UI.swift */; };
+		521D037F27539B80005EF713 /* AlVw.gif in Resources */ = {isa = PBXBuildFile; fileRef = 521D037E27539B80005EF713 /* AlVw.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +25,7 @@
 		033D01D02751F9D600B75564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		033D01D32751F9D600B75564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		033D01D52751F9D600B75564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		033D01E12751FEBD00B75564 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
-		1454AB4127521468002AF3A4 /* photoCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCon.swift; sourceTree = "<group>"; };
-		1454AB4527521548002AF3A4 /* viewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewCon.swift; sourceTree = "<group>"; };
-		1454AB47275215AE002AF3A4 /* 2ndviewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2ndviewCon.swift; sourceTree = "<group>"; };
-		1454AB4927521623002AF3A4 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		521D037E27539B80005EF713 /* AlVw.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = AlVw.gif; path = ../../../../Downloads/AlVw.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +58,8 @@
 		033D01C62751F9D400B75564 /* whatsThis */ = {
 			isa = PBXGroup;
 			children = (
-				033D01E12751FEBD00B75564 /* Resnet50.mlmodel */,
+				521D037D27539B74005EF713 /* Image */,
+				521D037927539B08005EF713 /* Model */,
 				033D01C72751F9D400B75564 /* AppDelegate.swift */,
 				033D01C92751F9D400B75564 /* SceneDelegate.swift */,
 				033D01CB2751F9D400B75564 /* ViewController.swift */,
@@ -74,12 +67,23 @@
 				033D01D02751F9D600B75564 /* Assets.xcassets */,
 				033D01D22751F9D600B75564 /* LaunchScreen.storyboard */,
 				033D01D52751F9D600B75564 /* Info.plist */,
-				1454AB4127521468002AF3A4 /* photoCon.swift */,
-				1454AB4527521548002AF3A4 /* viewCon.swift */,
-				1454AB47275215AE002AF3A4 /* 2ndviewCon.swift */,
-				1454AB4927521623002AF3A4 /* UI.swift */,
 			);
 			path = whatsThis;
+			sourceTree = "<group>";
+		};
+		521D037927539B08005EF713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		521D037D27539B74005EF713 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				521D037E27539B80005EF713 /* AlVw.gif */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +145,7 @@
 			files = (
 				033D01D42751F9D600B75564 /* LaunchScreen.storyboard in Resources */,
 				033D01D12751F9D600B75564 /* Assets.xcassets in Resources */,
+				521D037F27539B80005EF713 /* AlVw.gif in Resources */,
 				033D01CF2751F9D400B75564 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,14 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1454AB48275215AE002AF3A4 /* 2ndviewCon.swift in Sources */,
-				1454AB4A27521623002AF3A4 /* UI.swift in Sources */,
 				033D01CC2751F9D400B75564 /* ViewController.swift in Sources */,
 				033D01C82751F9D400B75564 /* AppDelegate.swift in Sources */,
-				033D01E22751FEBD00B75564 /* Resnet50.mlmodel in Sources */,
 				033D01CA2751F9D400B75564 /* SceneDelegate.swift in Sources */,
-				1454AB4227521468002AF3A4 /* photoCon.swift in Sources */,
-				1454AB4627521548002AF3A4 /* viewCon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BT4NA69XD;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
 				INFOPLIST_FILE = whatsThis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -327,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BT4NA69XD;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
 				INFOPLIST_FILE = whatsThis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
