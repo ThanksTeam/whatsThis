@@ -1,7 +1,7 @@
 # whatsThis
 ## Quench your curiosity by scanning an object with your camera, and find out what it is.
 
-GO TO Devpost -> https://devpost.com/software/whatsthis
+[GO TO Devpost](https://devpost.com/software/whatsthis).
 
 
 ### Inspiration
