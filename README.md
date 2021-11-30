@@ -1,6 +1,9 @@
 # whatsThis
 ## Quench your curiosity by scanning an object with your camera, and find out what it is.
 
+GO TO Devpost -> https://devpost.com/software/whatsthis
+
+
 ### Inspiration
 
 People started to enjoy outdoor activities and gatherings recently as more people are getting vaccinated. As much as we are getting used to the online, non-face-to-face environment, this painfully long period of various restrictions have triggered pandemic fatigue on countless people.
